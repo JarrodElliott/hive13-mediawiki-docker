@@ -1,0 +1,23 @@
+	{
+	"name": "BacktickCode",
+	"version": "1.0",
+	"author":
+		[
+		"Joel Thornton"
+		],
+	"url": "https://www.mediawiki.org/wiki/Extension:BacktickCode",
+	"description": "Allows to show text as <nowiki><code></nowiki> between backticks (`)",
+	"type": "parserhook",
+	"AutoloadClasses":
+		{
+		"BacktickCode": "BacktickCode.php"
+		},
+	"Hooks":
+		{
+		"InternalParseBeforeLinks":
+			[
+			"BacktickCode::onInternalParseBeforeLinks"
+			]
+		},
+	"manifest_version": 1
+	}

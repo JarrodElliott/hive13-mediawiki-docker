@@ -1,0 +1,44 @@
+version: '3.7'
+
+services:
+  hive13mediawikidocker:
+    container_name: h13-mw
+    image: hive13mediawikidocker
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    # user: "${MW_DOCKER_UID}:${MW_DOCKER_GID}"
+    restart: always
+    ports:
+      - 80:80
+    links:
+      - mw-database
+    volumes:
+  
+      - $"{MW_IMAGES_DIR_PATH}":/var/www/html/images
+    env_file:
+      - '.env'
+    depends_on:
+      - mw-database
+    command: ["/var/www/html/Docker/scripts/wait-for.sh", "mw-database", "3306", "php /var/www/html/maintenance/update.php"]
+
+
+  mw-database:
+    image: mariadb:11.4-rc
+    container_name: h13-mw-db
+    restart: always
+    env_file:
+      - '.env'
+    environment:
+      # @see https://phabricator.wikimedia.org/source/mediawiki/browse/master/includes/DefaultSettings.php
+      MYSQL_DATABASE: "${MW_DATABASE}"
+      MYSQL_USER:  "${MW_DB_USER}"
+      MYSQL_PASSWORD: "${MW_DB_PW}"
+      MYSQL_RANDOM_ROOT_PASSWORD: "${MW_DB_PW}"
+    ports:
+      - 3306:3306
+    volumes:
+      -  $"{SQL_DATA_PATH}":/var/lib/mysql
+
+volumes:
+  images:

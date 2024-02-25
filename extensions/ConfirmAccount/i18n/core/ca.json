@@ -1,0 +1,11 @@
+{
+	"@metadata": {
+		"authors": [
+			"Arnaugir",
+			"Fitoschido",
+			"SMP"
+		]
+	},
+	"action-lookupcredentials": "veure les credencials dels usuaris",
+	"right-lookupcredentials": "Veure les [[Special:UserCredentials|credencials d'usuari]]"
+}

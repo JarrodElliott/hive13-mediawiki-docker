@@ -1,0 +1,29 @@
+{
+	"@metadata": {
+		"authors": [
+			"Sagan",
+			"Ләйсән",
+			"З. ӘЙЛЕ"
+		]
+	},
+	"usercredentials": "Ҡатнашыусы тураһында раҫлау мәғлүмәте",
+	"usercredentials-leg": "Ҡатнашыусы тураһында раҫлау мәғлүмәтен эҙләү",
+	"usercredentials-user": "Ҡатнашыусы исеме:",
+	"usercredentials-text": "Түбәндә ҡатнашыусының һайланған иҫәп яҙмаһы тураһында тикшерелгән раҫлау мәғлүмәте бирелгән.",
+	"usercredentials-leg-user": "Иҫәп яҙмаһы",
+	"usercredentials-leg-areas": "Төп ҡыҙыҡһыныу өлкәләре",
+	"usercredentials-leg-person": "Шәхси мәғлүмәттәр",
+	"usercredentials-leg-other": "Башҡа мәғлүмәт",
+	"usercredentials-leg-ip": "IP-адрес мәғлүмәте",
+	"usercredentials-email": "Электрон почта адресы:",
+	"usercredentials-real": "Ысын исем:",
+	"usercredentials-bio": "Биография:",
+	"usercredentials-attach": "Һығымта:",
+	"usercredentials-notes": "Өҫтәмә иҫкәртеүҙәр:",
+	"usercredentials-urls": "Веб-сайттар исемлеге:",
+	"usercredentials-ip": "Сығанаҡ IP-адрес:",
+	"usercredentials-xff": "Сығанаҡ X-Forwarded-For:",
+	"usercredentials-agent": "Сығанаҡ User-Agent:",
+	"usercredentials-member": "Хоҡуҡтар:",
+	"usercredentials-badid": "Ҡатнашыусы тураһында раҫлау мәғлүмәте табылманы. Исемдең дөрөҫ яҙылышын тикшерегеҙ."
+}
