@@ -1,0 +1,19 @@
+{
+	"extra": {
+		"merge-plugin": {
+			"include": [
+				"extensions/*/composer.json",
+				"skins/*/composer.json"
+			]
+		}
+	},
+	"config": {
+		"allow-plugins": {
+			"wikimedia/composer-merge-plugin": true,
+			"composer/installers": true
+		}
+	},
+	"require": {
+		"mediawiki/semantic-media-wiki": "^4.1.2"
+	}
+}
