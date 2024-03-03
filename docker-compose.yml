@@ -14,8 +14,7 @@ services:
     links:
       - mw-database
     volumes:
-  
-      - $"{MW_IMAGES_DIR_PATH}":/var/www/html/images
+      - ${MW_IMAGES_DIR_PATH}:/var/www/html/images
     env_file:
       - '.env'
     depends_on:
@@ -38,7 +37,7 @@ services:
     ports:
       - 3306:3306
     volumes:
-      -  $"{SQL_DATA_PATH}":/var/lib/mysql
+      -  ${SQL_DATA_PATH}:/var/lib/mysql
 
 volumes:
   images:

@@ -1,10 +1,10 @@
 node_modules/
-vendor/
+#vendor/
 composer.lock
 
 .svn
 *~
 *.kate-swp
 .*.swp
-compiled_templates/
+# compiled_templates/
 /.eslintcache
