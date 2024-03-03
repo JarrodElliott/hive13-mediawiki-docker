@@ -15,8 +15,8 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
       net-tools \
     && docker-php-source extract
 
-
-RUN docker-php-ext-install -j$(nproc) intl calendar 
+RUN useradd -m mwuser
+RUN docker-php-ext-install -j$(nproc) intl calendar
 
 # Get and install composer
 WORKDIR /var/www/html
@@ -24,9 +24,17 @@ RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local
 
 COPY composer.local.json /var/www/html/composer.local.json
 
+#RUN chown mwuser /var/www/html
+RUN chmod 755 /var/www
+RUN chown -R mwuser  /var/www/html
+USER mwuser
+
 RUN cd /var/www/html/ \
 && composer config --no-plugins allow-plugins.composer/installers true \
- && composer require --update-no-dev 
+ && composer require --update-no-dev
+
+
+USER root
 
 # Copy all Local Files + LocalSettings.php from the host machine to the container
 COPY ["LocalSettings.php", "/var/www/html/"]
